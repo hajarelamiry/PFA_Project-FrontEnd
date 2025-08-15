@@ -5,6 +5,7 @@ import RegisterPage from './home/register'
 import ClientDashboard from './client/client_dashboard'
 import TransporterDashboard from './transportation/transporter_dashboard'
 import AdminDashboard from './admin/AdminDashboard'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
   return (
@@ -16,8 +17,11 @@ function App() {
         <Route path="/client-dashboard" element={<ClientDashboard />} />
         <Route path="/transporter-dashboard" element={<TransporterDashboard />} />
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        <Route path="/request/:id" element={<div>Page de détails de la demande</div>} />
       </Routes>
+      <ToastContainer position="top-right" autoClose={3000} />
     </BrowserRouter>
+    
   )
 }
 
